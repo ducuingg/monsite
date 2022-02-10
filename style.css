@@ -8,6 +8,7 @@
     font-family: 'advent_proregular';
     src: url('adventpro-regular-webfont.woff2') format('woff2'),
          url('adventpro-regular-webfont.woff') format('woff');
+	local('adventpro-regular-webfont'),
     font-weight: normal;
     font-style: normal;
 	font-family: 'Alatsi-Regular';
