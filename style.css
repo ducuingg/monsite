@@ -42,7 +42,7 @@ header{
 {
 	flex:1;
 	color: #4158D0;
-	font-size: 4em;
+	font-size: max(3vw,35px);
 	height: auto;
 	position: relative;
 }
@@ -60,7 +60,7 @@ header{
 	text-align: center;
 	justify-content: center;
 	margin: auto;
-	width: 12em;
+	width: 100%;
 
 }
 
@@ -68,7 +68,7 @@ header{
 .bonjour
 
 {
-	font-size: 1.8em;
+	font-size: max(1.5vw,30px);
 	color: white;
 	text-align: center;
 	justify-content: center;
@@ -80,16 +80,22 @@ header{
 
 }
 
+@media screen and (max-width: 500px){
+	.bonjour{
+		font-size: 22px;
+	}
+}
+
 #texte2
 
 {
-	font-size: 1.2em;
+	font-size: max(1.2vw,15px);
 	color: white;
 	text-align: center;
 	justify-content: center;
 	font-family:Avantgarde,Sans-serif;
 	margin: auto;
-	width: 40em;
+	width: 50%;
 
 }
 h1
@@ -100,7 +106,7 @@ h1
 
 h2
 {
-	font-size: 2.0em;
+	font-size: max(2vw,15px);
 	font-family:advent_proregular,Sans-serif;
 	text-transform: uppercase;
 	text-align: center;
@@ -121,7 +127,7 @@ h2
 
 .menu a
 {
-	font-size: 1.3em;
+	font-size: max(1.0vw, 15px);
 	color: #4158D0;;
 	text-decoration: none;
 }
@@ -138,6 +144,7 @@ h2
 	justify-content: center;
 	text-align: center;
 	border-radius: 20px;
+	width: 100%;
 	
 }
 
@@ -161,7 +168,8 @@ h2
 	justify-content: center;
 	background-color: #4158D0;
 	background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-	height : 600px;
+	min-height : 600px;
+	width: 100%;
 	margin-bottom: 10px;
 	}
 
@@ -191,7 +199,7 @@ h2
 	border-color:#FFCC70 ;
 	margin-left: auto;
 	margin-top: -150px;
-	width: 25em;
+	width: 20%;
 	margin-bottom: 10px;
 	font-family:Avantgarde,Sans-serif;
 	text-align: center;
@@ -213,7 +221,7 @@ h2
 	margin-left: 40px;
 	margin-right: auto;
 	margin-top: -150px;
-	width: 25em;
+	width: 20%;
 	margin-bottom: 10px;
 	font-family:Avantgarde,Sans-serif;
 	text-align: center;
@@ -225,7 +233,7 @@ h2
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 100px;
-	width: 60em;
+	width: 80%;
 }
 
 
@@ -435,7 +443,7 @@ h2
 	margin-bottom: -20px;
 	border-radius: 18px;
 	background-color: #3b3736;
-	width: 60em;
+	width: 70%;
 	padding: 80px;
 	padding-top: 45px;
 	padding-bottom: 45px;
@@ -449,7 +457,7 @@ h2
 	font-family:advent_proregular,Sans-serif;
 	text-transform: uppercase;
 	font-size: 1.8em;
-	width: 30em;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -460,7 +468,7 @@ h2
 {
 	display: block;
 	font-family:advent_proregular,Sans-serif;
-	width: 50em;
+	width: 100%;
 	font-size: 1.3em;
 	margin-left: auto;
 	margin-right: auto;
@@ -474,7 +482,7 @@ h2
 {
 	display: block;
 	font-family:advent_proregular,Sans-serif;
-	width: 30em;
+	width: 80%;
 	font-size: 1.3em;
 	margin-left: auto;
 	margin-right: auto;
@@ -512,6 +520,7 @@ footer
 	text-decoration: none;
 	height: auto;
 	font-family:advent_proregular,Sans-serif;
+	width: 100%;
 
 }
 
