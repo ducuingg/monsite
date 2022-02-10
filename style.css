@@ -8,7 +8,7 @@
     font-family: 'advent_proregular';
     src: url('adventpro-regular-webfont.woff2') format('woff2'),
          url('adventpro-regular-webfont.woff') format('woff');
-	local('adventpro-regular-webfont'),
+	local('AdventPro-Regular'),
     font-weight: normal;
     font-style: normal;
 	font-family: 'Alatsi-Regular';
@@ -16,7 +16,7 @@
     font-weight: normal;
     font-style: normal;
 	font-family: 'Poppins-Regular';
-	src:local('Poppins-Regular'),
+	src:local('Poppins-Regular.ttf'),
     src: url('Poppins-Regular.ttf') format('ttf'),
     font-weight: normal;
     font-style: normal;
