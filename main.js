@@ -61,7 +61,7 @@ function afficherMasquer(){
 	else
 		d.style.visibility="visible";
 }
-
+//coucou
 
 /*
 tab=["Bonjour, je suis Guillaume. Heureux de vous rencontrer !"];
