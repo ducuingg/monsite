@@ -10,6 +10,16 @@
          url('adventpro-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+	font-family: 'Alatsi-Regular';
+    src: url('Alatsi-Regular.ttf') format('ttf'),
+    font-weight: normal;
+    font-style: normal;
+	font-family: 'Poppins-Regular';
+    src: url('Poppins-Regular.ttf') format('ttf'),
+    font-weight: normal;
+    font-style: normal;
+	
+	
 
 }
 
@@ -72,7 +82,7 @@ header{
 	color: white;
 	text-align: center;
 	justify-content: center;
-	font-family:Avantgarde,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	margin: auto;
 	margin-bottom: 10px;
 	margin-bottom: 50px;
@@ -93,7 +103,7 @@ header{
 	color: white;
 	text-align: center;
 	justify-content: center;
-	font-family:Avantgarde,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	margin: auto;
 	width: 50%;
 
@@ -223,7 +233,7 @@ h2
 	margin-top: -150px;
 	width: 20%;
 	margin-bottom: 10px;
-	font-family:Avantgarde,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	text-align: center;
 }
 
@@ -287,7 +297,7 @@ h2
     position: absolute;
     top: 100%;
     left: 50%;
-    font-family: Avantgarde,Sans-serif;
+    font-family: Poppins-Regular,Sans-serif;
     text-transform: uppercase;
     text-align: center;
     -webkit-transform: translate(-50%, -50%);
