@@ -97,7 +97,20 @@ header{
 	.bonjour{
 		font-size: 22px;
 	}
+	.realisations{
+		display: block;
+		flex-wrap: wrap;
+	}
 }
+@media screen and (max-width: 1000px){
+	.realisations{
+		flex-wrap: wrap;
+	}
+	.containerlh{
+		margin-bottom: 200px;
+	}
+}
+
 
 #texte2
 
@@ -254,7 +267,7 @@ h2
 }
 
 
-.test{
+.realisations{
 	position: relative;
 	display:flex;
 	gap: 100px;
