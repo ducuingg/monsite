@@ -8,7 +8,7 @@
     font-family: 'advent_proregular';
     src: url('adventpro-regular-webfont.woff2') format('woff2'),
          url('adventpro-regular-webfont.woff') format('woff');
-	local('AdventPro-Regular'),
+	src :local('AdventPro-Regular'),
     font-weight: normal;
     font-style: normal;
 	font-family: 'Alatsi-Regular';
@@ -17,7 +17,7 @@
     font-style: normal;
 	font-family: 'Poppins-Regular';
 	src:local('Poppins-Regular.ttf'),
-    src: url('monsite/Poppins-Regular.ttf') format('ttf'),
+    src: url('Poppins-Regular.ttf') format('ttf'),
     font-weight: normal;
     font-style: normal;
 	
@@ -39,14 +39,14 @@ body
 	margin-right: 0px;
 	margin-bottom: 0px;
 	overflow-x:hidden;
-	
+	font-family: Poppins,Sans-serif;
 }
 
 header{
 	display: flex;
 	justify-content: flex-start;
 	align-items: baseline;
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins-regular,Sans-serif;
 	text-transform: uppercase;
 	flex-wrap: wrap;
 
@@ -58,6 +58,7 @@ header{
 	font-size: max(3vw,35px);
 	height: auto;
 	position: relative;
+	letter-spacing: 6px;
 }
 .menu
 {
@@ -81,14 +82,13 @@ header{
 .bonjour
 
 {
-	font-size: max(1.5vw,30px);
+	font-size: max(1.3vw,23px);
 	color: white;
 	text-align: center;
 	justify-content: center;
-	font-family:Poppins-Regular,Sans-serif;
+	font-family:Poppins,Sans-serif;
 	margin: auto;
 	margin-bottom: 10px;
-	margin-bottom: 50px;
 	width: 15em;
 
 }
@@ -106,7 +106,7 @@ header{
 	color: white;
 	text-align: center;
 	justify-content: center;
-	font-family:AvantGarde,Sans-serif;
+	font-family:Poppins,Sans-serif;
 	margin: auto;
 	width: 50%;
 
@@ -114,13 +114,13 @@ header{
 h1
 {	
 	font-size: 1.0em;
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins,Sans-serif;
 }
 
 h2
 {
 	font-size: max(2vw,15px);
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins,Sans-serif;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -143,12 +143,14 @@ h2
 	font-size: max(1.0vw, 15px);
 	color: #4158D0;;
 	text-decoration: none;
+	letter-spacing: 4px;
 }
 
 .menu a:hover
 {
 	font-weight: bold;
-	color:#4158D0;;
+	color:#4158D0;
+	text-decoration: underline;
 }
 
 #video{
@@ -198,7 +200,7 @@ h2
 	border-radius: 8px;
 }
 
-#blocAPROPOS
+.Designer
 {
 	display: block;
 	flex:10.8;
@@ -214,7 +216,7 @@ h2
 	margin-top: -150px;
 	width: 20%;
 	margin-bottom: 10px;
-	font-family:Avantgarde,Sans-serif;
+	font-family:Poppins,Sans-serif;
 	text-align: center;
 }
 
@@ -236,7 +238,7 @@ h2
 	margin-top: -150px;
 	width: 20%;
 	margin-bottom: 10px;
-	font-family:Poppins-Regular,Sans-serif;
+	font-family:Poppins,Sans-serif;
 	text-align: center;
 }
 
@@ -440,7 +442,7 @@ h2
 	text-transform: uppercase;
 	width: 10em;
 	min-height: 100%;
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	font-size: 1.5em;
 
 
@@ -467,7 +469,7 @@ h2
 .demarrer
 {
 	display: block;
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	text-transform: uppercase;
 	font-size: 1.8em;
 	width: 80%;
@@ -480,7 +482,7 @@ h2
 .textemail
 {
 	display: block;
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	width: 100%;
 	font-size: 1.3em;
 	margin-left: auto;
@@ -494,7 +496,7 @@ h2
 .mailme
 {
 	display: block;
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	width: 80%;
 	font-size: 1.3em;
 	margin-left: auto;
@@ -532,7 +534,7 @@ footer
 	color:white;
 	text-decoration: none;
 	height: auto;
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	width: 100%;
 
 }
@@ -540,7 +542,7 @@ footer
 #foot a
 {
 	
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	text-decoration: none;
 	color:white;
 }
@@ -556,7 +558,7 @@ footer
 #copyright
 {
 	display: flex;
-	font-family:advent_proregular,Sans-serif;
+	font-family:Poppins-Regular,Sans-serif;
 	justify-content: space-around;
 	text-align: center;
 	margin-top: 90px;
