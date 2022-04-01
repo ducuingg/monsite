@@ -1,9 +1,17 @@
 const loader=document.querySelector(".loader");
 
-window.addEventListener("load",() => {
-
+setTimeout(function(){
 	loader.classList.add("fondu-out");
-})
+
+},2000)
+
+setTimeout(function(){
+	loader.classList.add("fondu-off");
+
+},3000)
+
+
+
 
 const titre = document.querySelector(".Dev");
 const menu = document.querySelector(".menu");
@@ -52,7 +60,7 @@ d.onmouseover=function(){
 	afficherMasquer();
 }
 function afficherMasquer(){
-	if (p==-nbr+1)
+	if (p==-nbr+2)
 		g.style.visibility="hidden";
 	else
 		g.style.visibility="visible";
