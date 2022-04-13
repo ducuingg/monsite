@@ -1,7 +1,3 @@
-@media all and(max-width: 1024px)
-{
-	
-}
 
 
 @font-face {
@@ -28,21 +24,21 @@
 
 body
 {
-	background-color: #F9F9F9;
+	background-color: #000000;
 	padding: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	overflow-x:hidden;
 	font-family: Poppins,Sans-serif;
-	z-index: 9999;
 }
 
 header{
 	display: flex;
 	justify-content: flex-start;
 	align-items: baseline;
-	font-family:Poppins-regular,Sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #202020;
 	text-transform: uppercase;
 	flex-wrap: wrap;
 
@@ -50,11 +46,13 @@ header{
 .Dev
 {
 	flex:1;
-	color: #4158D0;
+	color: #ffffff;
 	font-size: max(3vw,35px);
+	font-weight: 600;
 	height: auto;
+	margin: auto;
 	position: relative;
-	letter-spacing: 6px;
+	letter-spacing: 4px;
 }
 
 #presentation
@@ -74,11 +72,11 @@ header{
 .bonjour
 
 {
-	font-size: max(1.3vw,23px);
+	font-size: max(2.3vw,23px);
 	color: white;
 	text-align: center;
 	justify-content: center;
-	font-family:Poppins,Sans-serif;
+	font-family: 'Playfair Display', serif;
 	margin: auto;
 	margin-bottom: 40px;
 	width: 15em;
@@ -169,10 +167,11 @@ h1
 
 h2
 {
-	font-size: max(2vw,15px);
-	font-family:Poppins-regular,Sans-serif;
+	font-size: max(2em,15px);
+	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	text-align: center;
+	color: #ffffff;
 }
 
 
@@ -191,136 +190,203 @@ h2
 .menu a
 {
 	font-size: max(1.0vw, 15px);
-	color: #4158D0;;
+	color: #ffffff;;
 	text-decoration: none;
 	letter-spacing: 4px;
 }
 
 .menu a:hover
 {
+
 	font-weight: bold;
-	color:#4158D0;
+	color:#d4d4d4;
 	text-decoration: underline;
 }
 
-.developpeur{
-	display: block;
-	position : relative;
+img.developpeur{
 	border-radius: 8px;
-	justify-content: center;
-	text-align: center;
 	height: auto;
 	width: 100%;
-}
-
-.design
-{
-	display: flex;
-	position : relative;
-	border-radius: 8px;
-	justify-content: center;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	height: auto;
-	width: 100%;
-	filter: blur(1px);
 }
 
 #conteneur1
 	{
-	display: block;
-	flex-wrap: wrap;	
-	position: relative;
+	display: block;	
 	justify-content: center;
-	background-color: #4158D0;
-	background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-	min-height : 600px;
+	background-color: #000000;
+	height:25em;
 	width: 100%;
 	margin-bottom: 10px;
 	}
 
-.imgcode{
-
-	display: flex;
-	flex-wrap: wrap;
-	height: 80px;
-	max-width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: white;
-	border-radius: 8px;
-}
-
-.Designer
-{
-	display: block;
-	flex:7.8;
-	flex-wrap: wrap;
-	position:relative;
-	padding: 12px;
-	background-color: #F9F9F9;
-	border-width: 0.1px;
-	border-style: solid;
-	border-radius: 18px;
-	border-color:#FFCC70 ;
-	margin-left: auto;
-	margin-top: -150px;
-	width: 20%;
-	margin-bottom: 10px;
-	font-family:Poppins,Sans-serif;
-	text-align: center;
-}
-
-.Développeur
-{
-	display: block;
-	flex-wrap: wrap;
-	justify-content: center;
-	flex:7.8;
-	position:relative;
-	padding: 12px;
-	background-color: #F9F9F9;
-	border-width: 0.1px;
-	border-style: solid;
-	border-radius: 18px;
-	border-color:#FFCC70 ;
-	margin-left: 40px;
-	margin-right: auto;
-	margin-top: -150px;
-	width: 20%;
-	margin-bottom: 10px;
-	font-family:Poppins,Sans-serif;
-	text-align: center;
-}
-
 .bloccentral
 {
 	display:flex;
+	flex-wrap: wrap;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 100px;
-	width: 70%;
+	width: 100%;
 }
 
+.Designer
+{	display: flex;
+	flex-wrap: wrap;
+	padding: 0.5em;
+	background-color: #FF3CAC;
+	background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+	border-width: 0.1px;
+	border-style: solid;
+	border-radius: 25px;
+	margin: auto;
+	width: 80%;
+	height: 45em;
+	margin-bottom: 10px;
+	text-align: center;
+	transition: 0.7s ease-in-out;
+}
+
+.Designer:hover{
+	box-shadow: 0px 0px 10px #651268;
+}
+
+.Designer-text{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	width: 50%;
+	height: 80%;
+}
+
+.Designer p{
+	color: #ffffff;
+	font-size: 1.2em;
+	text-align: left;
+	width: 85%;
+	height: auto;
+	margin: 2em;
+	margin-top: 0.1em;
+}
+
+.Designer h2{
+	text-align: left;
+	font-size: 6em;
+	font-weight: 19em;
+	color: rgb(168, 99, 202);
+	margin: 0.3em;
+	margin-bottom: -0.5em;
+}
+
+.Designer h3{
+	text-align: left;
+	font-size: 3em;
+	font-weight: 19em;
+	color: rgb(255, 255, 255);
+	margin: 0.8em;
+}
+
+img.design
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-self: flex-start;
+	margin: auto;
+	width: 50%;
+	height: auto;
+}
+
+.bouton-Designer{
+	display: flex;
+	flex-wrap: wrap;
+	width: 10em;
+	height: 4em;
+	padding: 0.3em;
+	justify-content: center;
+	border-radius: 16px;
+	border: 1px solid #ffffff;
+	color: #d4d4d4;
+	font-size: 1.4em;
+	margin-left: 2em;
+}
+.codeur
+{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0.5em;
+	background-color: #12131d;
+	border-width: 0.1px;
+	border-style: solid;
+	border-radius: 25px;
+	margin: auto;
+	width: 80%;
+	height: 45em;
+	margin-bottom: 10px;
+	text-align: center;
+	transition: 0.7s ease-in-out;
+}
+
+.codeur-text{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	width: 50%;
+	height: 80%;
+}
+
+.codeur p{
+	color: #ffffff;
+	font-size: 1.2em;
+	text-align: left;
+	width: 85%;
+	height: auto;
+	margin: 2em;
+	margin-top: 0.1em;
+}
+
+.codeur h2{
+	text-align: left;
+	font-size: 6em;
+	font-weight: 19em;
+	color: rgb(123, 121, 124);
+	margin: 0.3em;
+	margin-bottom: -0.5em;
+}
+
+.codeur h3{
+	text-align: left;
+	font-size: 3em;
+	font-weight: 19em;
+	color: rgb(255, 255, 255);
+	margin: 0.8em;
+}
+
+.codeur img{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-self: flex-start;
+	margin: auto;
+	width: 50%;
+	height: auto;
+
+}
 
 .realisations{
-	position: relative;
 	display:flex;
-	gap: 100px;
-	justify-content: space-evenly;
-	justify-items: baseline;
-	margin-bottom: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 85%;
-
+	gap: 2em;
+	justify-content: center;
+	align-items: flex-start;
+	height: 30em;
+	margin: auto;
+	width: 90%;
 }
 
 .containerlh,.containerpps{
-	position: relative;
 	width: 100%;
-	height: 100px;
+	height: auto;
 }
 
 .containerlh img, .containerpps img{
@@ -333,6 +399,7 @@ h2
 }
 
 .recouvertlh, .recouvertpps {
+	z-index: -2;
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     height: 100%; width: 100%;
@@ -362,62 +429,6 @@ h2
     transform: translate(-50%, -50%);
 }
 
-.logocode
-{
-	display: flex;
-	justify-content: center;
-	vertical-align: middle;
-	height: 120px;
-	padding: 10px;
-}
-
-.html,.css,.js 
-{
-	height: 5vw;
-	padding: auto;
-	margin: auto;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(70%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-
-.html:hover,.css:hover,.js:hover,.ai:hover,.ps:hover 
-{
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-}
-
-.adobe
-{
-	display: flex;
-	justify-content: center;
-	vertical-align: middle;
-	height: 130px;
-	width: 100%;
-}
-.ai,.ps
-{
-	height: 5vw;
-	max-height: 5vw;
-	margin : auto;
-	padding: auto;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(70%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-
 .carrousel{
 	margin-left: auto;
 	margin-right: auto;
@@ -438,8 +449,8 @@ h2
 }
 
 .photo{
-	width: 800px;
-	min-height: 400px;
+	width: 100%;
+	height: 25em;
 	margin: 0;
 	display: inline-flex;
 	background-size: cover;
@@ -579,8 +590,7 @@ footer
 	display:flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	background-color: #4158D0;
-	background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+	background-color: #202020;
 	text-transform: uppercase;
 	margin: auto;
 	padding: 10px;
@@ -609,7 +619,7 @@ footer h3 {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	align-items: center
+	align-items: center;
 	flex-wrap: wrap;
 }
 
