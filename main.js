@@ -1,77 +1,14 @@
-const loader=document.querySelector(".loader");
 
-setTimeout(function(){
-	loader.classList.add("fondu-out");
-
-},2000)
-
-setTimeout(function(){
-	loader.classList.add("fondu-off");
-
-},3000)
-
-
-
-
-const titre = document.querySelector(".Dev");
+const dev = document.querySelector(".Dev");
 const menu = document.querySelector(".menu");
-const imgcode = document.querySelector('.imgcode')
 const bonjour = document.querySelector('.bonjour')
 
 const TL1 = new TimelineMax({paused:true});
 
 TL1
-.from(titre,1,{y:-100,opacity:0})
-.from(bonjour,1,{y:-100,opacity:0})
-.from(menu,1,{x:100,opacity:0}, '-=0.5')
-.from(imgcode,1,{y:-40,opacity:0}, '-=0.5')
+.from(dev,1,{x:-50,opacity:0})
+.from(bonjour,1.4,{y:-50,opacity:0},'+=0.5')
+.from(menu,1,{x:50,opacity:0},'-=2.8')
 
 TL1.play();
 
-
-function car(){
-	nbr=3;
-	p=0;
-	container=document.getElementById("containerx");
-	g=document.getElementById("g");
-	d=document.getElementById("d");
-	container.style.width=(800*nbr)+"px";
-	for(i=1;i<=nbr;i++){
-		div=document.createElement("div");
-		div.className="photo";
-		div.style.backgroundImage="url('images/im"+i+".jpg')";
-		container.appendChild(div);
-	}
-	afficherMasquer();
-
-}
-g.onmouseover=function(){
-	if(p>-nbr+1)
-	p--;
-	container.style.transform="translate("+p*800+"px)";
-	container.style.transition="all 3s ease";
-	afficherMasquer();
-}
-d.onmouseover=function(){
-	if(p<0)
-	p++;
-	container.style.transform="translate("+p*800+"px)";
-	container.style.transition="all 3s ease";
-	afficherMasquer();
-}
-function afficherMasquer(){
-	if (p==-nbr+2)
-		g.style.visibility="hidden";
-	else
-		g.style.visibility="visible";
-	if (p==0)
-		d.style.visibility="hidden";
-	else
-		d.style.visibility="visible";
-}
-
-
-function init(){
-
-	car();
-}

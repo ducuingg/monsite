@@ -222,8 +222,6 @@ img.developpeur{
 	padding: 0.5em;
 	background-color: #FF3CAC;
 	background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-	border-width: 0.1px;
-	border-style: solid;
 	border-radius: 25px;
 	margin: auto;
 	width: 80%;
@@ -303,8 +301,6 @@ img.design
 	flex-wrap: wrap;
 	padding: 0.5em;
 	background-color: #12131d;
-	border-width: 0.1px;
-	border-style: solid;
 	border-radius: 25px;
 	margin: auto;
 	width: 80%;
@@ -312,6 +308,7 @@ img.design
 	margin-bottom: 10px;
 	text-align: center;
 	transition: 0.7s ease-in-out;
+	margin-bottom: 10em;
 }
 
 .codeur-text{
@@ -334,11 +331,12 @@ img.design
 
 .codeur h2{
 	text-align: left;
-	font-size: 6em;
+	font-size: 5em;
 	font-weight: 19em;
 	color: rgb(123, 121, 124);
 	margin: 0.3em;
 	margin-bottom: -0.5em;
+	z-index: 1;
 }
 
 .codeur h3{
@@ -359,176 +357,75 @@ img.design
 	margin: auto;
 	width: 50%;
 	height: auto;
+}
 
+.languages{
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+}
+.HTML,.CSS,.JS{
+	font-size: large;
+	color: #ffffff;
+	font-size: 6em;
+	opacity: 0.04;
 }
 
 .HTML{
-	font-size: large;
-	color: #ffffff;
-	display: flex;
-	font-size: 6em;
-	margin: auto;
+	animation: 1s ease-out infinite alternate-reverse 0.4s html forwards;
+}
+.CSS{
+	animation: 1.5s ease-out infinite alternate-reverse 1.5s html  forwards;
 }
 
-.H{
-	opacity: 0;
-	animation: 1s ease 1s html forwards;
-}
-.T{
-	opacity: 0;
-	animation: 1s ease 2s html forwards;
-}
-.M{
-	opacity: 0;
-	animation: 1s ease 3s html forwards;
-}
-.L{
-	opacity: 0;
-	animation: 1s ease 4s html ;
-	animation: 1s ease 5s htmlfin ;
+.JS{	
+	animation: 1.9s ease-out infinite alternate-reverse 2s html forwards;
 }
 
 @keyframes html{
 
 	from{
-		opacity: 0;
+		transform: translate(2%,4%);
 	}
-
 	to{
-		opacity: 1;
+		transform: translate(6,1%);
 	}
 
 }
 
-@keyframes htmlfin{
-
-	from{
-		opacity: 1;
-	}
-
-	to{
-		opacity: 0;
-	}
+.container{
+	background-image: linear-gradient(
+		to bottom,
+		#fff 50%,
+		black 50%
+	);
 
 }
-
-.realisations{
-	display:flex;
-	gap: 2em;
-	justify-content: center;
-	align-items: flex-start;
-	height: 30em;
-	margin: auto;
-	width: 90%;
+.container::after{
+	content:"";
+	display: block;
+	min-height: 100vh;
 }
-
-.containerlh,.containerpps{
-	width: 100%;
-	height: auto;
-}
-
-.containerlh img, .containerpps img{
-	position: relative;
-	width: 100%;
-	filter: blur(0px);
-	transition-property: -webkit-filter;
-	transition-duration: .5s;
-	border-radius: 10px;
-}
-
-.recouvertlh, .recouvertpps {
-	z-index: -2;
-    position: absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
-    height: 100%; width: 100%;
-    opacity: 0; transition: all .5s; 
-}
-.containerlh:hover .recouvertlh,.containerpps:hover .recouvertpps {
-    opacity: 1;
-}
-.containerlh:hover img,.containerpps:hover img
-{
-	filter: blur(5px);
-	transition-property: -webkit-filter;
-	transition-duration: .5s;
-}
-
-.recouvertlh span,.recouvertpps span{
-	color: white;
-    font-size: 1.5em;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    font-family: Poppins-Regular,Sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.carrousel{
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 100px;
-	max-width: 100em;
-	max-height: 400px;
-	box-shadow: 0 0 14px black;
-	position: relative;
-	overflow: hidden;
-	border-radius: 3px;
-}
-
-#containerx{
-	width: 100vh;
-	max-height: 400px;
+.content{
+	min-height: 100vh;
+	position: sticky;
+	top: 0px;
 	display: flex;
-
-}
-
-.photo{
+	justify-content: center;
 	width: 100%;
-	height: 25em;
-	margin: 0;
-	display: inline-flex;
-	background-size: cover;
-
+	align-items: center;
+	padding-bottom:100px;
+	mix-blend-mode:difference;
+}
+.content p {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+	color: white;
+	font-size: 15em;
+	width:100%;
 }
 
-.bouton{
-	position: absolute;
-	width: 70px;
-	cursor: pointer;
-	top: 150px;
-}
-
-#g{
-	right: 5px;
-	transform: rotate(0deg);
-	opacity: 0.4;
-	transition:all 0.3s ease;
-}
-
-#d{
-	left: 5px;
-	transform: rotate(180deg);
-	opacity: 0.4;
-	transition:all 0.3s ease;
-}
-
-#g:hover{
-	right: 5px;
-	transform: rotate(0deg) scale(1.1);
-	opacity: 1;
-	transition:all 0.3s ease;
-}
-
-#d:hover{
-	right: 5px;
-	transform: rotate(180deg) scale(1.1);
-	opacity: 1;
-	transition:all 0.3s ease;
-}
 
 .lebouton{
 	display: flex;
@@ -556,7 +453,7 @@ img.design
 	margin-right: auto;
 	margin-bottom: -20px;
 	border-radius: 18px;
-	background-color: #3b3736;
+	background-color: #202020;
 	width: 60%;
 	max-height: 50px;
 	padding: 80px;
