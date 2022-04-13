@@ -55,19 +55,6 @@ header{
 	letter-spacing: 4px;
 }
 
-#presentation
-
-{
-	padding: 60px;
-	font-size: 2.5em;
-	color: white;
-	text-align: center;
-	justify-content: center;
-	margin: auto;
-	width: 100%;
-
-}
-
 
 .bonjour
 
@@ -78,6 +65,7 @@ header{
 	justify-content: center;
 	font-family: 'Playfair Display', serif;
 	margin: auto;
+	margin-top: 2em;
 	margin-bottom: 40px;
 	width: 15em;
 
@@ -371,6 +359,56 @@ img.design
 	margin: auto;
 	width: 50%;
 	height: auto;
+
+}
+
+.HTML{
+	font-size: large;
+	color: #ffffff;
+	display: flex;
+	font-size: 6em;
+	margin: auto;
+}
+
+.H{
+	opacity: 0;
+	animation: 1s ease 1s html forwards;
+}
+.T{
+	opacity: 0;
+	animation: 1s ease 2s html forwards;
+}
+.M{
+	opacity: 0;
+	animation: 1s ease 3s html forwards;
+}
+.L{
+	opacity: 0;
+	animation: 1s ease 4s html ;
+	animation: 1s ease 5s htmlfin ;
+}
+
+@keyframes html{
+
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+
+}
+
+@keyframes htmlfin{
+
+	from{
+		opacity: 1;
+	}
+
+	to{
+		opacity: 0;
+	}
 
 }
 

@@ -69,34 +69,9 @@ function afficherMasquer(){
 	else
 		d.style.visibility="visible";
 }
-//coucou
-
-/*
-tab=["Bonjour, je suis Guillaume. Heureux de vous rencontrer !"];
-         i=0;
-         dir="G";
-         index=0;
-         function f(){
-          t=setTimeout("f()",80);
-          document.getElementById("presentation").innerHTML=tab[index%2].substring(0,i);
-          if(dir=="G"){
-            i+=1;
-            
-            }
-            /*
-            if(dir=="D"){
-               i-=1;
-               if(i<-5){
-                  dir='G';
-                  index+=1;
-               }
-            }*/
-
-       //}
-
 
 
 function init(){
-	//f();
+
 	car();
 }
