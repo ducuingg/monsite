@@ -1,21 +1,4 @@
 
-
-@font-face {
-    font-family: 'advent_proregular';
-    src: url('fonts/adventpro-regular-webfont.woff2') format('woff2'),
-         url('fonts/adventpro-regular-webfont.woff') format('woff');
-	src :local('AdventPro-Regular'),
-    font-weight: normal;
-    font-style: normal;
-	font-family: 'Alatsi-Regular';
-    src: url('Alatsi-Regular.ttf') format('ttf'),
-	font-style: normal;
-	font-family: 'Poppins-Regular';
-	src:local('Poppins-Regular.ttf'),
-    src:url('Poppins-Regular.ttf') format('ttf'),
-    font-style: normal;	
-}
-
  a, a:hover, a:focus, a:active {
       text-decoration: none;
       color: inherit;
@@ -30,7 +13,7 @@ body
 	margin-right: 0px;
 	margin-bottom: 0px;
 	overflow-x:hidden;
-	font-family: Poppins,Sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 header{
@@ -68,69 +51,6 @@ header{
 	margin-top: 2em;
 	margin-bottom: 40px;
 	width: 15em;
-
-}
-
-@media screen and (max-width: 500px){
-	header,.Dev{
-		display: flex;
-		justify-content: center;
-	}
-	.bonjour{
-		font-size: 22px;
-	}
-	#presentation{
-		padding-bottom:0px
-	}
-	.logocode{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.html,.css,.js{
-		height: 3vw;	
-		margin: -15px;
-	}
-	
-	.adobe{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.realisations{
-		display: block;
-		flex-wrap: wrap;
-	}
-	.blocmail{
-		width: 60%;
-		height: 10vw;
-	}
-	.textemail{
-		font-size: max(0.7vw, 5px);
-		width: 10%;
-	}
-	footer{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.liste{
-		margin-bottom: -45px;
-	}
-	.din{
-		margin-bottom: -100px;
-	}
-
-}
-@media screen and (max-width: 1000px){
-	.realisations{
-		flex-wrap: wrap;
-	}
-	.containerlh{
-		margin-bottom: 20vw;
-	}
 
 }
 
@@ -189,12 +109,6 @@ h2
 	font-weight: bold;
 	color:#d4d4d4;
 	text-decoration: underline;
-}
-
-img.developpeur{
-	border-radius: 8px;
-	height: auto;
-	width: 100%;
 }
 
 #conteneur1
@@ -337,6 +251,30 @@ img.design
 	margin: 0.3em;
 	margin-bottom: -0.5em;
 	z-index: 1;
+	animation: 0.9s ease pulse infinite alternate ;
+}
+
+@keyframes pulse{
+
+	0%{
+		color:rgb(123, 121, 124);
+	}
+
+	25%{
+		color:rgb(128, 126, 129);	
+	}
+	50%{
+		color:rgb(134, 132, 134);	
+	}
+	75%{
+		color:rgb(140, 140, 142);
+	}
+	100%{
+		color:rgb(145, 145, 149);	
+	}
+
+
+
 }
 
 .codeur h3{
@@ -361,14 +299,15 @@ img.design
 
 .languages{
 	display: flex;
-	justify-content: space-between;
-	flex: 1;
+	justify-content: center;
+	gap: 10em;
+	margin-top: 10em;
+	width: 100%;
+	
 }
 .HTML,.CSS,.JS{
-	font-size: large;
-	color: #ffffff;
-	font-size: 6em;
-	opacity: 0.04;
+	color: #fff;
+	font-size: 8em;
 }
 
 .HTML{
@@ -399,7 +338,6 @@ img.design
 		#fff 50%,
 		black 50%
 	);
-
 }
 .container::after{
 	content:"";
@@ -412,6 +350,7 @@ img.design
 	top: 0px;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	width: 100%;
 	align-items: center;
 	padding-bottom:100px;
@@ -420,13 +359,13 @@ img.design
 .content p {
 	display: flex;
 	justify-content: center;
+	align-items: flex-start;
 	gap: 1em;
 	color: white;
 	font-size: 15em;
 	width:100%;
+	margin-top: 0.3em;
 }
-
-
 .lebouton{
 	display: flex;
 	justify-content: center;
