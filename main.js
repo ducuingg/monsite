@@ -16,8 +16,6 @@ var imgzoom = document.querySelector(".contentphoto img");
 
 window.addEventListener("scroll",()=>{
 
-    
-
 
     if(window.scrollY>4400){
         imgzoom.style = "width:50vw "
@@ -53,5 +51,6 @@ window.addEventListener("scroll",()=>{
         imgzoom.style = "width:100vw" 
     }
 });
+
 
 
