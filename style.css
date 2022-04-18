@@ -413,6 +413,66 @@ img.design
 /* ------------------------*/
 
 
+/* CACULATRICE */
+
+.containerCalculatrice{
+
+	display: flex;
+	justify-content: center;
+	color:#fff;
+	border: #d36601 2px solid;
+	border-radius: 3px;
+	width: 25em;
+	margin: auto;
+
+}
+.inputCalc{
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	width: 30em;
+	height: 5em;
+	flex-direction: column;
+	background-color: #747272;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	border: none;
+	color: #fff;
+}
+
+.containertouches{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1em;
+	margin: 5px;
+}
+
+.toucheCalc:nth-child(-n+6){
+	background-color: #d36601;
+}
+
+.toucheCalc{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 1em;
+	width: 5em;
+	height: 5em;
+	background-color: #424242;
+	border-radius: 50% 50%;
+	text-align: center;
+	line-height:5em;
+	transition: 0.3s ease;
+}
+
+.toucheCalc:hover{
+	opacity: 0.8;
+}
+
+/*-------------------------------*/
+
 .lebouton{
 	display: flex;
 	justify-content: center;
