@@ -56,3 +56,50 @@ window.addEventListener("scroll",()=>{
 // CALCULATRICE
 
 
+const ecranElt = document.querySelector(".inputCalc");
+let precedent = 0;
+let affichage = "";
+
+
+window.onload = () =>{
+
+    let touches = document.querySelectorAll(".toucheCalc");
+
+    for(let touche of touches){
+        touche.addEventListener("click",gererTouches);
+    }
+
+    function gererTouches(){
+        let touche = this.innerText;
+
+        if(parseFloat(touche)<10){
+        //document.querySelector(".inputCalc") = touche;
+        affichage = touche;
+        ecranElt.innerText = affichage;
+        console.log(affichage);
+        }
+
+        //if(touche == "C"){
+        //document.querySelector(".inputCalc").value = "";
+        //}
+    }
+
+}
+
+
+
+
+    // KEYDOWN
+    const un = document.querySelector("#un");
+    document.addEventListener("keydown",hover);
+    document.addEventListener("keyup",hoveroff);
+
+    function hover(){
+        if(event.code =="Numpad1"){
+        un.style = "background-color : #d36601";
+        }
+    }
+    
+    function hoveroff(){
+        un.style = "background-color : #424242";
+    }
