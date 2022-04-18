@@ -51,6 +51,3 @@ window.addEventListener("scroll",()=>{
         imgzoom.style = "width:100vw" 
     }
 });
-
-
-
