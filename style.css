@@ -419,6 +419,30 @@ img.design
 /* ------------------------*/
 
 
+/* CACULATRICE */
+
+.containerCalculatrice{
+
+	display: flex;
+	justify-content: center;
+	color:#fff;
+	border: #d36601 3px solid;
+	width: 25em;
+
+}
+.containerCalculatrice input{
+	width: 20em;
+	height: 3em;
+	background-color: #4d4d4d;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	border: none;
+	color: #fff;
+}
+
+
+/*-------------------------------*/
+
 .lebouton{
 	display: flex;
 	justify-content: center;
