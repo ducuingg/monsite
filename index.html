@@ -8,6 +8,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet"> 
 		<script src="https://kit.fontawesome.com/e2a9598ff7.js" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap//3.10.3/gsap.min.js"></script>
 		<title> Guillaume Ducuing</title>
 	</head>
@@ -37,6 +38,11 @@
 						Depuis plusieurs années, je met à votre service mes compétences de développeur pour la réalisation de tous vos projets.
 					</p>
 				</div>
+				<div class="menulateral">
+					<a href=""><i class="fa-solid fa-pen-nib"></i></a>
+					<a href="#codeur"><i class="fa-brands fa-dev"></i></a>
+					<a href="#blocmail"><i class="fa-solid fa-comment-dots"></i></a>
+				</div>
 			</div>
 			<section>
 				<div class="bloccentral">
@@ -49,8 +55,8 @@
 						</div>
 						<img src="images/design.jpg" class="design">
 					</div>
-					<div class="codeur">
-						<div class="codeur-text">
+					<div id="codeur">
+						<div id="codeur-text">
 						<h2> Développeur</h2>
 						<h3>Lorem, ipsum.</h3>
 						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde eum doloremque dolore numquam odio sed aliquid amet odit rerum mollitia ratione ea consequuntur dolor officia soluta sequi explicabo rem molestiae ullam fuga consequatur est, minima aut voluptates. Praesentium quisquam dolore dolor perspiciatis libero, at accusamus culpa iste quo corporis quam numquam molestias id! Ipsam saepe quod reiciendis cupiditate? Aperiam hic, officiis voluptatum eaque commodi iste tenetur est cum a, quo quod laboriosam impedit! Culpa quis laboriosam nisi molestiae placeat ea, illum eius fugiat at dolorem doloremque corrupti ratione voluptatem similique asperiores? Totam, culpa. Perferendis sed magni unde ducimus voluptate est.</p>
@@ -73,31 +79,7 @@
 					<div class="contentphoto">
 						<img src="images/im3.jpg">
 				</div></div>
-				
-				<h2>Calculatrice</h2>
-				<input type="text" class="inputCalc">
-				<div 
-				class="containerCalculatrice">
-					<div class="containertouches">
-					<div class="toucheCalc" id = "clear">C</div>
-					<div class="toucheCalc" id = "plus">+</div>
-					<div class="toucheCalc" id = "moins">-</div>
-					<div class="toucheCalc" id = "fois">x</div>
-					<div class="toucheCalc" id= "diviser">/</div>
-					<div class="toucheCalc" id = "total">=</div>
-					<div class="toucheCalc" id = "sept">7</div>
-					<div class="toucheCalc" id = "huit">8</div>
-					<div class="toucheCalc" id = "neuf">9</div>
-					<div class="toucheCalc" id = "quatre">4</div>
-					<div class="toucheCalc" id = "cinq">5</div>
-					<div class="toucheCalc" id = "six">6</div>
-					<div class="toucheCalc" id = "zero">0</div>
-					<div class="toucheCalc" id = "un">1</div>
-					<div class="toucheCalc" id = "deux">2</div>
-					<div class="toucheCalc" id = "trois">3</div>
-				</div>
-				</div>
-				<div class="blocmail">
+				<div id="blocmail">
 					<div class="demarrer">
 						Démarrer un projet
 					</div>
@@ -112,13 +94,6 @@
 				</div>
 			</section>
 			<footer>
-				<div class="liste">
-					<h3> Me suivre</h3>
-					<ul class="foot">
-						<li><a href="https://fr.linkedin.com/" target="_blank"> Linkedin</a></li>
-						<li><a href="https://github.com/" target="_blank"> Github</a></li>
-					</ul>
-				</div>
 				<div class="din">
 				<a href="https://www.linkedin.com/in/guillaume-ducuing-a05ab6212/" target="_blank"><img src="images/in.png" alt="linkedin"/></a>
 				</div>

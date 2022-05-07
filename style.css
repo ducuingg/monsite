@@ -2,8 +2,9 @@
       text-decoration: none;
       color: inherit;
  }
-
-
+ html{
+    scroll-behavior: smooth;
+}
 body
 {
 	background-color: #000000;
@@ -36,7 +37,25 @@ header{
 	position: relative;
 	letter-spacing: 4px;
 }
+.menulateral{
+	display: flex;
+	flex-direction: column;
+	width: 5em;
+	height: 20em;
+	background-color: #FF3CAC;
+	background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+	border-radius: 15px;
+	margin-left: 2em;
+	position: absolute;
+	top:10em;
+}
 
+.menulateral i{
+	font-size: 2em;
+	color: white;
+	margin: auto;
+	justify-content: center;
+}
 
 .bonjour
 
@@ -52,8 +71,6 @@ header{
 	width: 15em;
 
 }
-
-
 #texte2
 
 {
@@ -66,6 +83,7 @@ header{
 	width: 50%;
 
 }
+
 h1
 {	
 	font-size: 1.0em;
@@ -204,7 +222,7 @@ img.design
 	font-size: 1.4em;
 	margin-left: 2em;
 }
-.codeur
+#codeur
 {
 	display: flex;
 	flex-wrap: wrap;
@@ -220,7 +238,7 @@ img.design
 	margin-bottom: 10em;
 }
 
-.codeur-text{
+#codeur-text{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -228,7 +246,7 @@ img.design
 	height: 80%;
 }
 
-.codeur p{
+#codeur p{
 	color: #ffffff;
 	font-size: 1.2em;
 	text-align: left;
@@ -238,7 +256,7 @@ img.design
 	margin-top: 0.1em;
 }
 
-.codeur h2{
+#codeur h2{
 	text-align: left;
 	font-size: 5em;
 	font-weight: 19em;
@@ -272,7 +290,7 @@ img.design
 
 }
 
-.codeur h3{
+#codeur h3{
 	text-align: left;
 	font-size: 3em;
 	font-weight: 19em;
@@ -280,7 +298,7 @@ img.design
 	margin: 0.8em;
 }
 
-.codeur img{
+#codeur img{
 
 	display: flex;
 	flex-wrap: wrap;
@@ -412,7 +430,9 @@ img.design
 
 /* ------------------------*/
 
-
+.containerTest{
+	display: flex;
+}
 /* CACULATRICE */
 
 .containerCalculatrice{
@@ -426,11 +446,11 @@ img.design
 	margin: auto;
 
 }
-.inputCalc{
+.ecran{
 	display: flex;
 	justify-content: center;
 	margin: auto;
-	width: 30em;
+	width: 25em;
 	height: 5em;
 	flex-direction: column;
 	background-color: #747272;
@@ -473,6 +493,39 @@ img.design
 
 /*-------------------------------*/
 
+/* TO DO LIST */
+
+.containerToDo{
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+	flex-wrap: nowrap;
+}
+
+.containerToDo i{
+	display: flex;
+	flex-direction: column;
+	color: #eceff0;
+	z-index: 10;
+	margin-left: 71.5em;
+}
+.todolist{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	justify-content: center;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+	width: 30em;
+	height: 3em;
+	background-color: #d88fc8;
+	border: none;
+}
+
+
+
+/* ----------------------------- */
+
 .lebouton{
 	display: flex;
 	justify-content: center;
@@ -490,7 +543,7 @@ img.design
 
 }
 
-.blocmail
+#blocmail
 {
 	position: relative;
 	color: white;
