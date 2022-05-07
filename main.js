@@ -52,3 +52,9 @@ window.addEventListener("scroll",()=>{
     }
 });
 
+// window.addEventListener("scroll",function(){
+
+//     var menu = document.querySelector(".menulateral");
+
+//     window.scrollY.value == menu.scrollTop
+// })

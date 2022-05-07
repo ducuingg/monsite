@@ -21,7 +21,7 @@ header{
 	justify-content: flex-start;
 	align-items: baseline;
 	font-family: 'Open Sans', sans-serif;
-	background-color: #202020;
+	background-color: #383838;
 	text-transform: uppercase;
 	flex-wrap: wrap;
 
@@ -42,8 +42,7 @@ header{
 	flex-direction: column;
 	width: 5em;
 	height: 20em;
-	background-color: #FF3CAC;
-	background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+	background-color: #383838;
 	border-radius: 15px;
 	margin-left: 2em;
 	position: absolute;
@@ -51,10 +50,17 @@ header{
 }
 
 .menulateral i{
+	display: flex;
 	font-size: 2em;
 	color: white;
-	margin: auto;
 	justify-content: center;
+	align-items: center;
+	margin-top: 1.8em;
+	transition: 0.3s ease-in-out;
+}
+
+i:hover{
+	color: #717171;
 }
 
 .bonjour
@@ -104,6 +110,7 @@ h2
 {
 	list-style-type: none;
 	display: flex;
+	margin-top: 1.5em;
 }
 
 .menu li
@@ -147,7 +154,7 @@ h2
 	width: 100%;
 }
 
-.Designer
+#designer
 {	
 	opacity: 1;
 	display: flex;
@@ -162,7 +169,7 @@ h2
 	margin-bottom: 10px;
 	text-align: center;
 }
-.Designer-text{
+#designer-text{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -170,7 +177,7 @@ h2
 	height: 50em;
 }
 
-.Designer p{
+#designer p{
 	color: #ffffff;
 	font-size: 1.2em;
 	text-align: left;
@@ -180,7 +187,7 @@ h2
 	margin-top: 0.1em;
 }
 
-.Designer h2{
+#designer h2{
 	text-align: left;
 	font-size: 6em;
 	font-weight: 19em;
@@ -189,7 +196,7 @@ h2
 	margin-bottom: -0.5em;
 }
 
-.Designer h3{
+#designer h3{
 	text-align: left;
 	font-size: 3em;
 	font-weight: 19em;
@@ -209,12 +216,12 @@ img.design
 	height: auto;
 }
 
-.bouton-Designer{
+#btn-designer{
 	display: flex;
 	flex-wrap: wrap;
 	width: 10em;
-	height: 1.5em;
-	padding: 0.3em;
+	height: 2em;
+	padding: 0.2em;
 	justify-content: center;
 	border-radius: 16px;
 	border: 1px solid #ffffff;
@@ -347,19 +354,19 @@ img.design
 
 }
 
-.container{
+#container{
 	background-image: linear-gradient(
 		to bottom,
 		#ffffff 50%,
 		#000000 50%
 	);
 }
-.container::after{
+#container::after{
 	content:"";
 	display: block;
 	min-height: 100vh;
 }
-.content{
+#content{
 	min-height: 100vh;
 	position: sticky;
 	top: 0px;
@@ -371,7 +378,7 @@ img.design
 	padding-bottom:100px;
 	mix-blend-mode:exclusion;
 }
-.content p {
+#content p {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -428,101 +435,6 @@ img.design
 	box-shadow:         0px 0px 6px 0px rgba(50, 50, 50, 0.77);
 }
 
-/* ------------------------*/
-
-.containerTest{
-	display: flex;
-}
-/* CACULATRICE */
-
-.containerCalculatrice{
-
-	display: flex;
-	justify-content: center;
-	color:#fff;
-	border: #d36601 2px solid;
-	border-radius: 3px;
-	width: 25em;
-	margin: auto;
-
-}
-.ecran{
-	display: flex;
-	justify-content: center;
-	margin: auto;
-	width: 25em;
-	height: 5em;
-	flex-direction: column;
-	background-color: #747272;
-	font-family: 'Open Sans', sans-serif;
-	text-transform: uppercase;
-	border: none;
-	color: #fff;
-}
-
-.containertouches{
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 1em;
-	margin: 5px;
-}
-
-.toucheCalc:nth-child(-n+6){
-	background-color: #d36601;
-}
-
-.toucheCalc{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	gap: 1em;
-	width: 5em;
-	height: 5em;
-	background-color: #424242;
-	border-radius: 50% 50%;
-	text-align: center;
-	line-height:5em;
-	transition: 0.3s ease;
-}
-
-.toucheCalc:hover{
-	opacity: 0.8;
-}
-
-/*-------------------------------*/
-
-/* TO DO LIST */
-
-.containerToDo{
-	display:flex;
-	flex-direction: column;
-	width: 100%;
-	flex-wrap: nowrap;
-}
-
-.containerToDo i{
-	display: flex;
-	flex-direction: column;
-	color: #eceff0;
-	z-index: 10;
-	margin-left: 71.5em;
-}
-.todolist{
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	justify-content: center;
-	margin-top: 0.2em;
-	margin-bottom: 0.2em;
-	width: 30em;
-	height: 3em;
-	background-color: #d88fc8;
-	border: none;
-}
-
-
 
 /* ----------------------------- */
 
@@ -550,11 +462,12 @@ img.design
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: -20px;
+	margin-top: 5em;
+	margin-bottom: 5em;
 	border-radius: 18px;
 	background-color: #202020;
-	width: 60%;
-	max-height: 50px;
+	width: 80%;
+	max-height: 15em;
 	padding: 80px;
 	padding-top: 45px;
 	padding-bottom: 45px;
@@ -562,7 +475,7 @@ img.design
 
 }
 
-.demarrer
+#demarrer
 {
 	display: block;
 	font-family:Poppins-Regular,Sans-serif;
@@ -576,7 +489,7 @@ img.design
 
 }
 
-.textemail
+#textemail
 {
 	display: block;
 	font-family:Poppins-Regular,Sans-serif;
@@ -590,7 +503,7 @@ img.design
 
 }
 
-.mailme
+#mailme
 {
 	display: block;
 	font-family:Poppins-Regular,Sans-serif;
@@ -608,7 +521,7 @@ img.design
 
 }
 
-.mailme:hover
+#mailme:hover
 {
 	background-color: #FFCC70;
 	color: black;
@@ -641,20 +554,6 @@ footer h3 {
 	justify-content: center;
 }
 
-.foot a
-{
-
-	color:white;
-}
-
-.foot
-{
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;
-}
 
 div.din
 {
