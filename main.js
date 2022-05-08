@@ -58,3 +58,75 @@ window.addEventListener("scroll",()=>{
 
 //     window.scrollY.value == menu.scrollTop
 // })
+
+//--------------------------------JEU
+
+// setInterval(personnage,2000)
+
+function personnage(){
+
+    $(".personnage").animate({
+        "top":"+=35px"
+    },2500,"linear",function(){
+        $(this).css({
+            "top":"770px"
+        });
+    });
+}
+
+$(document).keydown(function (e) { 
+    switch(true){
+        case(e.which == 39)://droite
+        if($(".personnage").offset().left<1800){
+            $(".personnage").css({
+                "left":"+=42",
+            })
+            $(".missile").css({
+                "left":"+=42",
+            })
+        }
+        break;
+        case(e.which == 37)://gauche
+        if($(".personnage").offset().left>0){
+            $(".personnage").css({
+            "left":"-=42",
+            })
+            $(".missile").css({
+                "left":"-=42",
+                })
+        }
+        break;
+    }
+});
+
+$(document).keydown(function(e){
+    if(e.which == 32 ){
+
+$(".missile").animate({
+    "top":"-=950px"
+},500,"linear",function(){
+    $(this).css({
+        "top":" 870px"
+    });
+});
+}
+});
+
+$(document).mousedown(function(e){
+if($(".blocsouris").mouseover()){
+
+$(".missile").animate({
+    "top":"-=950px"
+},500,"linear",function(){
+    $(this).css({
+        "top":" 870px",
+
+    });
+});
+}
+});
+
+$(".blocsouris").mousemove(function(event){
+       $(".personnage").attr("style","margin-left:"+event.pageX+"px; margin-top:"+event.pageY+"px");
+    $(".missile").attr("style","margin-left:"+event.pageX+"px; margin-top:"+event.pageY+"px");
+    });
