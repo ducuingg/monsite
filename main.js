@@ -107,87 +107,105 @@ $(".jouer").click(function (e) {
         x=1;
 }
 });
-    // JEU
-    setInterval(son);
-    setInterval(resetPlane,1800);
-    setInterval(animCiel);
-    setInterval(animRocket,2000)
-    let win = 0;
-    if(x==0){
-    let missile = new Audio("missile.mp3");
-    missile.play();
-    missile.loop=true;
-    let explosion = new Audio("explosion.mp3");
-}
+//     // JEU
+//     setInterval(son);
+//     setInterval(resetPlane,1800);
+//     setInterval(animCiel);
+//     setInterval(animRocket,2000)
+//     let win = 0;
+//     if(x==0){
+//     let missile = new Audio("missile.mp3");
+//     missile.play();
+//     missile.loop=true;
+//     let explosion = new Audio("explosion.mp3");
+// }
 
-// -----------ANIMATION CIEL----------------------------------
-    function animCiel(){
-    $(".conteneurciel").animate({
-        "left":"-=3500px"
-    },195000,"linear",function(){$(this).css({
-        "left":"0px"
-    });
-    animCiel();
-});
-    }
-// -----------ANIMATION AVION----------------------------------
-    $(document).keydown(function (e) { 
-        switch(true){
-            case(e.which == 38)://HAUT
-                if($(".avion").offset().top>810){
-                    $(".avion").css({
-                        "bottom":"+=41",
-                        "transform":"rotate(-1deg)"              
-                    })
-                }
-            break;
-            case(e.which == 40)://BAS
-                if($(".avion").offset().top<1020){
-            $(".avion").css({
-                "bottom":"-=42",
-                "transform":"rotate(5deg)"
-            })
-                }
-            break;
-        }
-    });
-// -----------ANIMATION ROCKET----------------------------------
-    function animRocket(){ 
+// // -----------ANIMATION CIEL----------------------------------
+//     function animCiel(){
+//     $(".conteneurciel").animate({
+//         "left":"-=3500px"
+//     },195000,"linear",function(){$(this).css({
+//         "left":"0px"
+//     });
+//     animCiel();
+// });
+//     }
+// // -----------ANIMATION AVION----------------------------------
+//     $(document).keydown(function (e) { 
+//         switch(true){
+//             case(e.which == 38)://HAUT
+//                 if($(".avion").offset().top>810){
+//                     $(".avion").css({
+//                         "bottom":"+=41",
+//                         "transform":"rotate(-1deg)"              
+//                     })
+//                 }
+//             break;
+//             case(e.which == 40)://BAS
+//                 if($(".avion").offset().top<1020){
+//             $(".avion").css({
+//                 "bottom":"-=42",
+//                 "transform":"rotate(5deg)"
+//             })
+//                 }
+//             break;
+//         }
+//     });
+// // -----------ANIMATION ROCKET----------------------------------
+//     function animRocket(){ 
 
-        $(".rocket").delay(1800).animate({
-            "left":"-=2550px"
-        },1900,"linear",function(){
-            let x = Math.random();
-            $(this).css({
-                "left":"-201px",
-                "bottom" :`${Math.floor((x*22)-13)}3px`
-            });
-        });
+//         $(".rocket").delay(1800).animate({
+//             "left":"-=2550px"
+//         },1900,"linear",function(){
+//             let x = Math.random();
+//             $(this).css({
+//                 "left":"-201px",
+//                 "bottom" :`${Math.floor((x*22)-13)}3px`
+//             });
+//         });
+//         }
+// // -----------SON----------------------------------
+// function son(){
+//         let monavion =$(".avion");
+//         let marocket =$(".rocket");
+//         let avionPosTop = parseInt(monavion.position().top);
+//         let rocketPosTop = parseInt(marocket.position().top);
+//         let avionlargeur = monavion.width();
+//         let avionhauteur = monavion.height();
+//         let rockethauteur = marocket.height();
+//         let rocketlargeur = marocket.width();
+//         let rocketPosLeft = parseInt(marocket.offset().left)
+//         if(avionlargeur+260>rocketPosLeft && (( avionPosTop+75 > rocketPosTop && avionPosTop-45 < rocketPosTop ))){
+//             $(".avion").attr("src", "images/explosion.png").fadeOut();
+//             let number = $("h3");
+//             win++;
+//             number.html(win)        
+//             $(".rocket").stop(true,true);
+//             explosion.play()
+//             return true
+//         }        
+//     }
+// function resetPlane(){
+//         let valid = son();
+//         // if (valid){
+//             $(".avion").attr("src", "images/plane3.png").fadeIn();
+//         // }
+//     }
+
+    //--------------------menu latéral
+
+    const sticky = document.querySelector(".menulateral");
+
+    const posYNav = sticky.offsetTop;
+    // console.log(posYNav);
+
+    window.addEventListener('scroll',()=>{
+        if(window.scrollY > posYNav + 150){
+            sticky.style.position = "fixed";
+            sticky.style.top = "150px";
         }
-// -----------SON----------------------------------
-function son(){
-        let monavion =$(".avion");
-        let marocket =$(".rocket");
-        let avionPosTop = parseInt(monavion.position().top);
-        let rocketPosTop = parseInt(marocket.position().top);
-        let avionlargeur = monavion.width();
-        let avionhauteur = monavion.height();
-        let rockethauteur = marocket.height();
-        let rocketlargeur = marocket.width();
-        let rocketPosLeft = parseInt(marocket.offset().left)
-        if(avionlargeur+260>rocketPosLeft && (( avionPosTop+75 > rocketPosTop && avionPosTop-45 < rocketPosTop ))){
-            $(".avion").attr("src", "images/explosion.png").fadeOut();
-            let number = $("h3");
-            win++;
-            number.html(win)        
-            $(".rocket").stop(true,true);
-            explosion.play()
-            return true
-        }        
-    }
-function resetPlane(){
-        let valid = son();
-        // if (valid){
-            $(".avion").attr("src", "images/plane3.png").fadeIn();
-        // }
-    }
+        else if (window.scrollY < posYNav - 110){
+            sticky.style.position =  "absolute";
+            sticky.style.top = "12em";
+        }
+    })

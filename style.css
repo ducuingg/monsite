@@ -43,7 +43,7 @@ body.jeu{
     filter: blur(1px);
     width: calc(103% + 0px);
     height: calc(103% + 1px);
-    animation: glowing 15s linear alternate-reverse infinite;
+    animation: glowing 11s linear alternate-reverse infinite;
     opacity: 1;
     transition: opacity 0.1s ease-in;
 	border-radius: 50%;
@@ -206,7 +206,8 @@ header{
 	border-radius: 15px;
 	margin-left: 2em;
 	position: absolute;
-	top:10em;
+	top:12em;
+	z-index: 2;
 }
 
 .menulateral i{
