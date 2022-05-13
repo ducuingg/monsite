@@ -192,7 +192,7 @@ $(".jouer").click(function (e) {
 //         // }
 //     }
 
-    //--------------------menu latéral
+    //--------------------menu latéral sticky--------------------------
 
     const sticky = document.querySelector(".menulateral");
     let fleche = document.querySelector("i.fa-circle-chevron-up");
@@ -207,7 +207,6 @@ $(".jouer").click(function (e) {
             sticky.style.opacity = "0.7";
             fleche.style.display = "flex";
             sticky.style.height ="23.5em";
-
         }
         else if (window.scrollY < posYNav - 110){
             sticky.style.position =  "absolute";
