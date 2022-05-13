@@ -195,17 +195,25 @@ $(".jouer").click(function (e) {
     //--------------------menu latéral
 
     const sticky = document.querySelector(".menulateral");
+    let fleche = document.querySelector("i.fa-circle-chevron-up");
 
     const posYNav = sticky.offsetTop;
     // console.log(posYNav);
 
     window.addEventListener('scroll',()=>{
-        if(window.scrollY > posYNav + 150){
+        if(window.scrollY > posYNav + 25){
             sticky.style.position = "fixed";
-            sticky.style.top = "150px";
+            sticky.style.top = "1em";
+            sticky.style.opacity = "0.7";
+            fleche.style.display = "flex";
+            sticky.style.height ="23.5em";
+
         }
         else if (window.scrollY < posYNav - 110){
             sticky.style.position =  "absolute";
             sticky.style.top = "12em";
+            sticky.style.opacity = "1";
+            fleche.style.display = "none";
+            sticky.style.height ="19em";
         }
     })
