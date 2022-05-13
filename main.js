@@ -12,11 +12,11 @@ TL1
 
 TL1.play();
 
+
+function zoom(){
+
 var imgzoom = document.querySelector(".contentphoto img");
-
 window.addEventListener("scroll",()=>{
-
-
     if(window.scrollY>4400){
         imgzoom.style = "width:50vw "
     }
@@ -52,81 +52,142 @@ window.addEventListener("scroll",()=>{
     }
 });
 
-// window.addEventListener("scroll",function(){
+}
+zoom();
 
-//     var menu = document.querySelector(".menulateral");
+document.addEventListener("scroll",function(){
 
-//     window.scrollY.value == menu.scrollTop
-// })
+let designer = document.querySelector("#designer");
+let codeur = document.querySelector("#codeur");
+
+if(window.scrollY>400){
+
+
+}
+if(window.scrollY>800){
+
+}
+if(window.scrollY>1200){
+
+}
+});
 
 //--------------------------------JEU
 
-// setInterval(personnage,2000)
-
-function personnage(){
-
-    $(".personnage").animate({
-        "top":"+=35px"
-    },2500,"linear",function(){
+let x=1;
+//---------bouton toogle----
+$(".jouer").click(function (e) { 
+    e.preventDefault();
+    let x=1;
+    if($(".conteneurciel").is(":hidden")){
+       $(".conteneurciel").slideDown().css("display","block");
+       $(".conteneurjeu").slideDown().css("display","block");
+    //    $(".jouer").css("margin-top","-=7em");
+       $(".jouer").animate({
+        "top":"-=13em"
+    },490,"linear",function(){
         $(this).css({
-            "top":"770px"
+            "top":"13em",
+            "animation":"none"
         });
     });
-}
-
-$(document).keydown(function (e) { 
-    switch(true){
-        case(e.which == 39)://droite
-        if($(".personnage").offset().left<1800){
-            $(".personnage").css({
-                "left":"+=42",
-            })
-            $(".missile").css({
-                "left":"+=42",
-            })
-        }
-        break;
-        case(e.which == 37)://gauche
-        if($(".personnage").offset().left>0){
-            $(".personnage").css({
-            "left":"-=42",
-            })
-            $(".missile").css({
-                "left":"-=42",
-                })
-        }
-        break;
+       x=0;
     }
-});
-
-$(document).keydown(function(e){
-    if(e.which == 32 ){
-
-$(".missile").animate({
-    "top":"-=950px"
-},500,"linear",function(){
-    $(this).css({
-        "top":" 870px"
-    });
-});
+    if(x==1){
+        $(".conteneurciel").slideUp().css("display","none");
+        $(".conteneurjeu").slideUp().css("display","none");
+        $(".jouer").animate({
+            "top":"+=14.5em"
+        },490,"linear",function(){
+            $(this).css({
+                "top":"27em",
+                "animation":"move 5s ease-in-out alternate infinite"
+            });
+        });
+        x=1;
 }
 });
-
-$(document).mousedown(function(e){
-if($(".blocsouris").mouseover()){
-
-$(".missile").animate({
-    "top":"-=950px"
-},500,"linear",function(){
-    $(this).css({
-        "top":" 870px",
-
-    });
-});
+    // JEU
+    setInterval(son);
+    setInterval(resetPlane,1800);
+    setInterval(animCiel);
+    setInterval(animRocket,2000)
+    let win = 0;
+    if(x==0){
+    let missile = new Audio("missile.mp3");
+    missile.play();
+    missile.loop=true;
+    let explosion = new Audio("explosion.mp3");
 }
-});
 
-$(".blocsouris").mousemove(function(event){
-       $(".personnage").attr("style","margin-left:"+event.pageX+"px; margin-top:"+event.pageY+"px");
-    $(".missile").attr("style","margin-left:"+event.pageX+"px; margin-top:"+event.pageY+"px");
+// -----------ANIMATION CIEL----------------------------------
+    function animCiel(){
+    $(".conteneurciel").animate({
+        "left":"-=3500px"
+    },195000,"linear",function(){$(this).css({
+        "left":"0px"
     });
+    animCiel();
+});
+    }
+// -----------ANIMATION AVION----------------------------------
+    $(document).keydown(function (e) { 
+        switch(true){
+            case(e.which == 38)://HAUT
+                if($(".avion").offset().top>810){
+                    $(".avion").css({
+                        "bottom":"+=41",
+                        "transform":"rotate(-1deg)"              
+                    })
+                }
+            break;
+            case(e.which == 40)://BAS
+                if($(".avion").offset().top<1020){
+            $(".avion").css({
+                "bottom":"-=42",
+                "transform":"rotate(5deg)"
+            })
+                }
+            break;
+        }
+    });
+// -----------ANIMATION ROCKET----------------------------------
+    function animRocket(){ 
+
+        $(".rocket").delay(1800).animate({
+            "left":"-=2550px"
+        },1900,"linear",function(){
+            let x = Math.random();
+            $(this).css({
+                "left":"-201px",
+                "bottom" :`${Math.floor((x*22)-13)}3px`
+            });
+        });
+        }
+// -----------SON----------------------------------
+function son(){
+        let monavion =$(".avion");
+        let marocket =$(".rocket");
+        let avionPosTop = parseInt(monavion.position().top);
+        let rocketPosTop = parseInt(marocket.position().top);
+        let avionlargeur = monavion.width();
+        let avionhauteur = monavion.height();
+        let rockethauteur = marocket.height();
+        let rocketlargeur = marocket.width();
+        let rocketPosLeft = parseInt(marocket.offset().left)
+        if(avionlargeur+260>rocketPosLeft && (( avionPosTop+75 > rocketPosTop && avionPosTop-45 < rocketPosTop ))){
+            $(".avion").attr("src", "images/explosion.png").fadeOut();
+            let number = $("h3");
+            win++;
+            number.html(win)        
+            $(".rocket").stop(true,true);
+            explosion.play()
+            return true
+        }        
+    }
+function resetPlane(){
+        let valid = son();
+        // if (valid){
+            $(".avion").attr("src", "images/plane3.png").fadeIn();
+        // }
+    }

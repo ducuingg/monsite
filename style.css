@@ -5,33 +5,112 @@
 body.jeu{
 	overflow:hidden;
 }
+.site i{
+	font-size: 3em;
+}
 .bienvenue{
-	font-family: 'Open Sans', sans-serif;
 	color: white;
-	font-size: 10em;
-	font-family: 'Oooh Baby', cursive;
+	font-size: 4em;
+    font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
 	text-align: center;
+	line-height: 1em;
 	margin-top: 1em;
  }
- 
-.blocsouris{
-	 width: 100%;
-	 height: 11em;
-	 background-color: rgb(0, 0, 0);
-	 bottom: 0;
+/*bouton*/
+.site{
+	display: block;
+	margin:auto;
+	margin-top: 6em;
+    width: 10em;
+    height: 10em;
+    border: 2px;
+    outline: none;
+    color: #fff;
+    background: #111;
+    position: relative;
+    border-radius: 50%;
+}
+
+.site:before {
+    content: '';
+    background: linear-gradient(50deg, #aeaeae,#f8f8f8, #c2c2c2, #f0f0f0,#c3c3c3, #cdcdcd, #a0a0a0,#b1b1b1, #dbdbdb);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(1px);
+    width: calc(103% + 0px);
+    height: calc(103% + 1px);
+    animation: glowing 15s linear alternate-reverse infinite;
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+	border-radius: 50%;
+}
+
+.site:active {
+    color: rgb(182, 180, 180);
+	background-color: #000000;
+}
+
+.site:active:after {
+    background: transparent;
+}
+
+.site:hover:before {
+    opacity: 1;
+}
+
+.site:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0;}
+    50% { background-position: 600% 0;}
+    100% { background-position: 0 0; }
+}
+
+
+.jouer{
+	 font-size: 1.2em;
+	 border: none;
+	 padding: 10px;
+	 width:5em;
+	 height: 5em;
+	 border-radius: 50%;
+	 margin-top: 14em;
+	 margin-left:1em;
 	 position: absolute;
-	 z-index: -1;
-	 cursor: none;
+	 background-color: #111;
+	 color: lightgray;
+	 animation: move 5s ease-in-out alternate infinite;
+ }
+ @keyframes move{
+	 0%{
+		transform: translateX(-10px);
+	 }
+	 30%{
+		transform: translateY(-20px);
+	 }
+	 60%{
+		transform: translateX(-20px);
+	 }
+	 100%{
+		transform: translateY(-20px);
+	 }
  }
 
-.missile{
-	width: 0.2em;
-	height: 0.8em;
-	bottom: 4em;
-	margin-left: 5em;
-	background-color: #ffffff;
-	position: absolute;
-}
+
 
 @keyframes glow{
 	from{
@@ -41,17 +120,42 @@ body.jeu{
 		filter: invert(10%);
 	}
 }
-.personnage{
-	width: 2em;
-	height: 2em;
-	background-color:#ffffff;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 3.7em;
-	left: 4em;
 
+/*----------------JEU--------------*/
+.rocket,.avion,.rocket2{
+    position: relative;
+    width: 80px;
+    height: auto;
+}
+.conteneurciel{
+	width: 800em;
+	height: 20em;
+	background-image: url('images/ciel2.png');
+	bottom: 0;
+	position: absolute;
+	z-index: -1;
+	cursor: none;
+	display: none
+}
+.conteneurjeu{
+    width: 90%;
+    height: 20em;
+	margin-left: 11em;
+	bottom: 0;
+	display: none;
+    overflow: hidden;
+    position: absolute;
+}
+.rocket{
+    margin-left: 2500px;
+    margin-bottom: 20em;
 }
 
+.explosion{
+    display: none ;
+    position: relative;
+    width: 250px;
+}
 
 /* ------------------------------------------------------ */
  a, a:hover, a:focus, a:active {
