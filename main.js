@@ -206,6 +206,7 @@ $(".jouer").click(function (e) {
             sticky.style.top = "1em";
             sticky.style.opacity = "0.7";
             fleche.style.display = "flex";
+            fleche.style.animation = " 0.6s menulateral infinite alternate ";
             sticky.style.height ="23.5em";
         }
         else if (window.scrollY < posYNav - 110){

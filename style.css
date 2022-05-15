@@ -210,6 +210,17 @@ header{
 	z-index: 2;
 }
 
+@keyframes menulateral{
+
+	from{
+		transform: translate(0%,0%);
+	}
+	to{
+		transform: translate(0%,20%);
+	}
+
+}
+
 .menulateral i{
 	display: flex;
 	font-size: 2em;
@@ -324,7 +335,7 @@ h2
 	width: 100%;
 }
 
-#designer
+#bloc1
 {	
 	opacity: 1;
 	display: flex;
@@ -339,7 +350,7 @@ h2
 	margin-bottom: 10px;
 	text-align: center;
 }
-#designer-text{
+#bloc1-text{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -347,7 +358,7 @@ h2
 	height: 50em;
 }
 
-#designer p{
+#bloc1 p{
 	color: #ffffff;
 	font-size: 1.2em;
 	text-align: left;
@@ -357,7 +368,7 @@ h2
 	margin-top: 0.1em;
 }
 
-#designer h2{
+#bloc1 h2{
 	text-align: left;
 	font-size: 6em;
 	font-weight: 19em;
@@ -366,7 +377,7 @@ h2
 	margin-bottom: -0.5em;
 }
 
-#designer h3{
+#bloc1 h3{
 	text-align: left;
 	font-size: 3em;
 	font-weight: 19em;
@@ -374,7 +385,7 @@ h2
 	margin: 0.8em;
 }
 
-img.design
+img.bloc1
 {
 	display: flex;
 	flex-wrap: wrap;
@@ -386,7 +397,7 @@ img.design
 	height: auto;
 }
 
-#btn-designer{
+#btn-bloc1{
 	display: flex;
 	flex-wrap: wrap;
 	width: 10em;
@@ -399,12 +410,13 @@ img.design
 	font-size: 1.4em;
 	margin-left: 2em;
 }
-#codeur
+#bloc2
 {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0.5em;
-	background-color: #12131d;
+	background-color: #FF3CAC;
+	background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
 	border-radius: 25px;
 	margin: auto;
 	width: 80%;
@@ -415,7 +427,7 @@ img.design
 	margin-bottom: 10em;
 }
 
-#codeur-text{
+#bloc2-text{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -423,7 +435,7 @@ img.design
 	height: 80%;
 }
 
-#codeur p{
+#bloc2 p{
 	color: #ffffff;
 	font-size: 1.2em;
 	text-align: left;
@@ -433,7 +445,7 @@ img.design
 	margin-top: 0.1em;
 }
 
-#codeur h2{
+#bloc2 h2{
 	text-align: left;
 	font-size: 5em;
 	font-weight: 19em;
@@ -467,7 +479,7 @@ img.design
 
 }
 
-#codeur h3{
+#bloc2 h3{
 	text-align: left;
 	font-size: 3em;
 	font-weight: 19em;
@@ -475,7 +487,7 @@ img.design
 	margin: 0.8em;
 }
 
-#codeur img{
+#bloc2 img{
 
 	display: flex;
 	flex-wrap: wrap;
@@ -701,12 +713,15 @@ img.design
 }
 
 form{
+	display: block;
 	margin: auto;
-	width: 70em;
+	width: 80em;
 	height: 25em;
 	background-color: #202020;
 	margin-bottom: 5em;
 	color: white;
+	border:none;
+	border-radius: 5px;
 }
 
 form i{
@@ -717,12 +732,20 @@ input{
 	float: left;
 	padding: 0.4em;
 	margin: 2em;
+	border: none;
+	border-radius: 8px;
+}
+input :last-child(){
+	display:none;
 }
 
 textarea{
 	display: flex;
-	width: 100%;
-	margin:auto
+	width: 80%;
+	height: 20em;
+	margin:auto;
+	border: none;
+	border-radius: 8px;
 }
 
 
