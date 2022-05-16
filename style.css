@@ -531,7 +531,7 @@ img.bloc1
 		transform: translate(2%,4%);
 	}
 	to{
-		transform: translate(6,1%);
+		transform: translate(6%,1%);
 	}
 
 }
@@ -716,7 +716,7 @@ form{
 	display: block;
 	margin: auto;
 	width: 80em;
-	height: 25em;
+	height: 27em;
 	background-color: #202020;
 	margin-bottom: 5em;
 	color: white;
@@ -728,27 +728,74 @@ form i{
 	font-size: 5em;
 }
 input{
-	display: block;
-	float: left;
+	display: inline-block;
+	width: 15em;
 	padding: 0.4em;
+	padding-left: 0.5em;
+	letter-spacing: 0.3em;
 	margin: 2em;
 	border: none;
 	border-radius: 8px;
+	box-shadow:inset 7px 6px 5px -2px rgba(50, 50, 50, 0.75);
 }
-input :last-child(){
-	display:none;
+
+#champs{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: auto;
+}
+#envoi{
+	display: block;
+	padding: 0.8em;
+	margin: auto;
+	float: inherit;
+	background-color: #FF3CAC;
+	background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+	color:#fff;
+	width: 10em;
+	transition: 0.5s ease;
+	box-shadow:inset 7px 6px 5px -2px rgba(50, 50, 50, 0.75);
+}
+#envoi:hover{
+	background-color: #FF3CAC;
+	background-image: linear-gradient(25deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+	width: 8em;
 }
 
 textarea{
 	display: flex;
 	width: 80%;
-	height: 20em;
+	height: 15em;
 	margin:auto;
+	margin-bottom: 1em;
+	padding:0.5em;
 	border: none;
 	border-radius: 8px;
+	letter-spacing: 0.3em;
+	box-shadow:inset 7px 6px 5px -2px rgba(50, 50, 50, 0.75);
 }
 
+.fa-paper-plane{
+	font-size: 2em;
+	margin-left: 20em;
+	animation: avion ease-in-out 1s reverse  ;
+}
 
+@keyframes avion{
+	0%{
+		transform: translate(600%,-600%);
+	}
+	30%{
+		
+	}
+	60%{
+
+	}
+	90%{
+
+	}
+}
 footer
 {
 	z-index: 99999;
