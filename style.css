@@ -645,7 +645,7 @@ img.bloc1
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5em;
-	margin-bottom: 5em;
+	margin-bottom: 0em;
 	border-radius: 18px;
 	background-color: #202020;
 	width: 80%;
@@ -689,7 +689,7 @@ img.bloc1
 {
 	display: block;
 	font-family:Poppins-Regular,Sans-serif;
-	width: 80%;
+	width: 20em;
 	font-size: 1.3em;
 	margin-left: auto;
 	margin-right: auto;
@@ -722,6 +722,15 @@ form{
 	color: white;
 	border:none;
 	border-radius: 5px;
+	opacity: 1;
+	transition : 1s ease-in-out;
+}
+
+.formtoggle{
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition : 1s ease-in-out;
 }
 
 form i{
@@ -820,11 +829,20 @@ footer h3 {
 }
 
 
-div.din
+.din
 {
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	margin-left: 0.3em;
+	font-size: 3em;
+}
+
+.git{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3em;
 }
 .copyright
 {

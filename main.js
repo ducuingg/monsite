@@ -217,3 +217,14 @@ $(".jouer").click(function (e) {
             sticky.style.height ="19em";
         }
     })
+
+    //----------------menu formulaire-------
+    function toggleform(){
+
+    const envoi = document.querySelector("#mailme");
+    const form = document.querySelector("form");
+    envoi.addEventListener("click",()=>{
+       form.classList.toggle("formtoggle");
+    })
+}
+toggleform();
